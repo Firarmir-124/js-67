@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Button, ButtonGroup, Paper} from "@mui/material";
+import {Box, Button, ButtonGroup} from "@mui/material";
 import {answer, inputValue, removeValue, resetValue} from "../Calculator/CalculatorSlice";
 import {useDispatch} from "react-redux";
 
