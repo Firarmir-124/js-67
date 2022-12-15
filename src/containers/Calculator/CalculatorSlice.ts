@@ -17,9 +17,15 @@ export const calculatorSlice = createSlice({
     },
     answer: (state) => {
       state.value = eval(state.value)
+    },
+    resetValue: (state) => {
+      state.value = ''
+    },
+    removeValue: (state) => {
+      state.value = state.value.slice(0, -1);
     }
   }
 })
 
 export const calculatorReducer = calculatorSlice.reducer;
-export const {inputValue, answer} = calculatorSlice.actions;
+export const {inputValue, answer, resetValue, removeValue} = calculatorSlice.actions;
