@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Button, ButtonGroup} from "@mui/material";
-import {answer, inputValue, removeValue, resetValue} from "../Calculator/CalculatorSlice";
+import {answer, inputValue, removeValue, resetValue} from "../../containers/Calculator/CalculatorSlice";
 import {useDispatch} from "react-redux";
 
 const NUMBERS = [

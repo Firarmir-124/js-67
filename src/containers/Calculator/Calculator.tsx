@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector} from "react-redux";
 import {RootState} from "../../app/store";
 import {Box, Paper} from "@mui/material";
-import Keyboard from "../Keyboard/Keyboard";
+import Keyboard from "../../components/Keyboard/Keyboard";
 
 const Calculator = () => {
   const calculatorValue = useSelector((state:RootState) => state.calculator.value);
