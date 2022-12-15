@@ -11,7 +11,15 @@ const initialState: CalculatorState = {
 export const calculatorSlice = createSlice({
   name: 'calculator',
   initialState,
-  reducers: {}
+  reducers: {
+    inputValue: (state, action) => {
+      state.value += action.payload;
+    },
+    answer: (state) => {
+      state.value = eval(state.value)
+    }
+  }
 })
 
 export const calculatorReducer = calculatorSlice.reducer;
+export const {inputValue, answer} = calculatorSlice.actions;
