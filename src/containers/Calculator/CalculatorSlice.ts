@@ -16,7 +16,11 @@ export const calculatorSlice = createSlice({
       state.value += action.payload;
     },
     answer: (state) => {
-      state.value = eval(state.value)
+      try {
+        state.value = eval(state.value)
+      }catch (e) {
+        state.value = ''
+      }
     },
     resetValue: (state) => {
       state.value = ''
