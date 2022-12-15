@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Button, ButtonGroup, Paper} from "@mui/material";
-import {answer, inputValue} from "../Calculator/CalculatorSlice";
+import {answer, inputValue, removeValue, resetValue} from "../Calculator/CalculatorSlice";
 import {useDispatch} from "react-redux";
 
 const NUMBERS = [
@@ -25,12 +25,27 @@ const Keyboard = () => {
         {NUMBERS.map(num => (
           <Button
             onClick={() => dispatch(inputValue(num.value))}
-            sx={{width: '50px', height: '50px', mb: '10px'}}
+            sx={{width: '50px', height: '50px'}}
             variant="outlined"
           >
             {num.value}
           </Button>
         ))}
+
+        <Button
+          onClick={() => dispatch(resetValue())}
+          sx={{width: '50px', height: '50px'}}
+          variant="outlined"
+        >
+          C
+        </Button>
+        <Button
+          onClick={() => dispatch(removeValue())}
+          sx={{width: '50px', height: '50px'}}
+          variant="outlined"
+        >
+          #
+        </Button>
       </Box>
 
 
