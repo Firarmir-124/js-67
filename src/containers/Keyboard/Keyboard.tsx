@@ -24,6 +24,7 @@ const Keyboard = () => {
       <Box sx={{width: '200px'}}>
         {NUMBERS.map(num => (
           <Button
+            key={num.value}
             onClick={() => dispatch(inputValue(num.value))}
             sx={{width: '50px', height: '50px'}}
             variant="outlined"
@@ -44,7 +45,7 @@ const Keyboard = () => {
           sx={{width: '50px', height: '50px'}}
           variant="outlined"
         >
-          #
+          CE
         </Button>
       </Box>
 
