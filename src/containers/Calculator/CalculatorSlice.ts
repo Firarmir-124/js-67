@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 interface CalculatorState {
   value: string;
@@ -12,7 +12,7 @@ export const calculatorSlice = createSlice({
   name: 'calculator',
   initialState,
   reducers: {
-    inputValue: (state, action) => {
+    inputValue: (state, action:PayloadAction<string>) => {
       state.value += action.payload;
     },
     answer: (state) => {
